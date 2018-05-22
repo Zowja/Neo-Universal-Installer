@@ -30,7 +30,7 @@ public class ThreadExtract extends Thread {
 	static Boolean isOnlyResources = false;
 	
 	public ThreadExtract(LinkedList<File> mods) throws Exception{
-		extract = new File("../temp");
+		extract = new File("./temp");
 		this.mods = mods;
 		dirExtract = new LinkedList<File>();
 		jarExtract = new LinkedList<File>();

@@ -33,7 +33,7 @@ public class ThreadInstall extends Thread {
 		this.dir = new File(version, "../..");
 		this.oldjar = new File(version, "/" + version.getName() + ".jar");
 		this.newjar = new File(dir, "/versions/" + name + "/" + name + ".jar");
-		this.extract = new File("../temp");
+		this.extract = new File("./temp");
 		dirString = Directory.getAppDir().getPath().replace("\\", "/");
 	}
 	

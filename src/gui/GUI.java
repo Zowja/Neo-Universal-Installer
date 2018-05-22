@@ -60,7 +60,7 @@ public class GUI {
 			@Override
 			public void windowClosing(WindowEvent arg0) {
 				try {
-					File deleteTemp = new File("../temp");
+					File deleteTemp = new File("./temp");
 					if(deleteTemp.exists())
 					ThreadInstall.deleteFile(deleteTemp);
 				} catch (Exception e) {
@@ -118,8 +118,6 @@ public class GUI {
 		scroll2.setVisible(false);
 		p.add(scroll2);
 		
-		JFileChooser fc = new JFileChooser(new File(".."));
-		
 		select = new JButton(" Select ");
 		p.add(select);
 		select.setEnabled(true);
@@ -135,7 +133,7 @@ public class GUI {
 				
 				addText("Select the Mod file.");
 				
-				JFileChooser fc = new JFileChooser(new File(".."));
+				JFileChooser fc = new JFileChooser(new File("."));
 				fc.setDialogTitle("Choose the Mod .zip File");
 				fc.getActionMap().get("viewTypeDetails").actionPerformed(null);
 				select.setEnabled(false);
@@ -192,7 +190,7 @@ public class GUI {
 				addMod.setEnabled(false);
 				addText("Select the Mod file.");
 				
-				JFileChooser fc = new JFileChooser(new File(".."));
+				JFileChooser fc = new JFileChooser(new File("."));
 				fc.setDialogTitle("Choose the Mod .zip File");
 				install.setEnabled(false);
 				addMod.setEnabled(false);
